@@ -10,7 +10,7 @@ public class Flight {
     private Plane plane;
     private Passenger passenger;
 
-    public Flight(int flightNumber, String destination, String depatureAirport, String depatureTime){
+    public Flight(int flightNumber, Plane plane, String destination, String depatureAirport, String depatureTime){
         this.passengers = new ArrayList<Passenger>();
         this.flightNumber = flightNumber;
         this.destination = destination;
@@ -18,6 +18,10 @@ public class Flight {
         this.depatureTime = depatureTime;
         this.plane = new Plane(PlaneType.AIRBUS900);
         this.passenger = passenger;
+    }
+
+    public Plane getPlane(){
+        return plane;
     }
 
     public int getPassengers(){
